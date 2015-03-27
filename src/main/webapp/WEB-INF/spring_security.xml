@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <global-method-security pre-post-annotations="enabled"/>
+
+
+    <http pattern="//landingPage" security="none"/>
+    <http pattern="//registrate" security="none"/>
+    <http pattern="//approveEmail*" security="none"/>
+    <http pattern="//recoverPassword_*" security="none"/>
+    <http pattern="/changePassword" security="none"/>
+    <http pattern="//mangerAlertTwiloMl" security="none"/>
+    <http pattern="//call" security="none"/>
+    <http pattern="//unitpay-c9ce.txt" security="none"/>
+    <http pattern="//recoverPassword" security="none"/>
+    <http pattern="//getWidgetProperties" security="none"/>
+    <http pattern="//serviceManager/registrate/*" security="none"/>
+    <http pattern="//twilio/*" security="none"/>
+    <http pattern="//twilio/callFromBrowser/*" security="none"/>
+    <http pattern="/resources/**" security="none"/>
+
+    <http auto-config="true" pattern="/serviceManager/**" authentication-manager-ref="managerAuthenticationManager">
+        <intercept-url pattern="/serviceManager/**" access="ROLE_MANAGER"/>
+        <form-login login-processing-url="/serviceManager/manager_spring_security_check"
+                    login-page="/landingPage"
+                    authentication-failure-url="/landingPage?managerLoginError"/>
+        <remember-me user-service-ref="jdbcManagerService"/>
+    </http>
+
+    <http auto-config="true" pattern="/**" authentication-manager-ref="userAuthenticationManager">
+        <intercept-url pattern="/**" access="ROLE_USER, ROLE_ADMIN"/>
+
+        <form-login login-processing-url="/spring_security_check"
+                    login-page="/landingPage"
+                    authentication-failure-url="/landingPage?userLoginError"/>
+        <remember-me user-service-ref="jdbcUserService"/>
+    </http>
+
+
+    <jdbc-user-service id="jdbcUserService"
+                       data-source-ref="releaseDataSource"
+                       users-by-username-query="select email, password, allowed and emailConfirmed from CallbackUser where  email = ?"
+                       authorities-by-username-query="select email, 'ROLE_USER' from CallbackUser where email = ?"/>
+
+    <jdbc-user-service id="jdbcManagerService"
+                       data-source-ref="releaseDataSource"
+                       users-by-username-query="select phoneNumber, password, !ISNULL(NULLIF(password,&quot;&quot;))  from Manager where  phoneNumber = ?"
+                       authorities-by-username-query="select phoneNumber, 'ROLE_MANAGER' from Manager where phoneNumber = ?"/>
+
+    <user-service id="inMemoryUserService">
+        <user name="admin" password="admin" authorities="ROLE_ADMIN"/>
+    </user-service>
+
+    <authentication-manager id="userAuthenticationManager">
+        <authentication-provider user-service-ref="jdbcUserService"/>
+        <authentication-provider user-service-ref="inMemoryUserService"/>
+    </authentication-manager>
+
+    <authentication-manager id="managerAuthenticationManager">
+        <authentication-provider user-service-ref="jdbcManagerService"/>
+    </authentication-manager>
+
+</beans:beans>

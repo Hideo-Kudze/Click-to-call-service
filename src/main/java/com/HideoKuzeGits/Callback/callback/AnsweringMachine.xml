@@ -1,0 +1,5 @@
+<Response>
+    <Say voice="woman" language="ru">
+        Автоответчик
+    </Say>
+</Response>

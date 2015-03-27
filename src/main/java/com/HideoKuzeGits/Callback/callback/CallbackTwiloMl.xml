@@ -1,0 +1,7 @@
+<Response>
+    <Pause length="5"/>
+    <Say voice="woman" language="ru-RU">
+        Привет) Я знаю что ты сделал прошли лето. Увидимся на анимке) Курка!
+    </Say>
+    <Dial>+380930629870</Dial>
+</Response>

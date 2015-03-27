@@ -1,0 +1,151 @@
+element.style {
+}
+.popup-incomnig-call .content-popup .button-reply {
+width: 90px;
+height: 90px;
+background: #b6e6d3;
+border: none;
+border-radius: 50%;
+}
+user agent stylesheetinput[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+padding: 1px 6px;
+}
+user agent stylesheetinput[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+align-items: flex-start;
+text-align: center;
+cursor: default;
+color: buttontext;
+padding: 2px 6px 3px;
+border: 2px outset buttonface;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+background-color: buttonface;
+box-sizing: border-box;
+}
+user agent stylesheetinput, textarea, keygen, select, button {
+margin: 0em;
+font: -webkit-small-control;
+color: initial;
+letter-spacing: normal;
+word-spacing: normal;
+text-transform: none;
+text-indent: 0px;
+text-shadow: none;
+display: inline-block;
+text-align: start;
+}
+user agent stylesheetinput, textarea, keygen, select, button, meter, progress {
+-webkit-writing-mode: horizontal-tb;
+}
+user agent stylesheetbutton {
+-webkit-appearance: button;
+}
+Pseudo ::after element
+.popup-incomnig-call .content-popup .button-reply:after {
+background-position: 0 -351px;
+width: 65px;
+height: 65px;
+margin-top: 10px;
+margin-right: 5px;
+}
+.menu > li > a:before, .breadcrumbs a:after, .links a:after, .popup-close:after, .main .call:before, .main .mass:before, .main li:before, .call-number .numbers .green:after, .call-number .numbers .red:after, .popup-incomnig-call .content-popup .button-reply:after, .popup-incomnig-call .content-popup .button-drop:after, .switch-active-inner .icon-switch-active, .switch-not-active-inner .icon-switch-not-active, .switch-active .warning:before {
+content: '';
+display: inline-block;
+background-image: url(../img/spritesheet.png);
+background-repeat: no-repeat;
+}
+Inherited from div.col
+.popup-incomnig-call .content-popup .col {
+width: 50%;
+text-align: center;
+float: left;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from div.content-popup
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from form.form.form-incomnig-call
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from div.popup.popup-incomnig-call
+.popup {
+display: none;
+position: relative;
+top: 50px;
+box-sizing: border-box;
+width: 970px;
+padding: 50px 0;
+margin: 0 auto 50px;
+border-radius: 10px;
+box-shadow: 0 0 0 4px #46cf98;
+background: #e9e9e9;
+color: #878787;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from div.layout
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from body.lock
+body {
+position: relative;
+min-height: 100%;
+background: url(../img/pattern.png);
+font: 14px 'Open Sans';
+color: #5f5f5f;
+overflow-x: hidden;
+}
+body {
+line-height: 1;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
+Inherited from html
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+margin: 0;
+padding: 0;
+}
